@@ -10,7 +10,7 @@ if(isset($_REQUEST['enviar'])):
     $login=new loginController();
     $comparar = $login->comparar($_REQUEST['usuario']);
     if($comparar == false):
-        echo "<br><p><b>Este usuario no existe ...</b></p>";
+        echo "<br><p><b>Este usuario no existe ...</b><a href='formRegistro.php'>Registrate</a></p>";
     else:
     $correcto = $login->correcto($_REQUEST['usuario'], $_REQUEST['password']);
     header('location:dashboard.php');

@@ -20,10 +20,6 @@ class loginController extends MysqlConection  {
     public function __construct() {
         parent::__construct();
     }
-    //put your code here
-    public function setUser($params){
-        return parent::Insert("usuario", $params);
-    }
     
     public function comparar($user) {
         $query="SELECT count(*) as contador from usuario where usuario like '$user'";
