@@ -17,8 +17,8 @@ class registroController extends MysqlConection {
         parent::__construct();
     }
    
-    public function setUser($params){
-        return parent::Insert("usuario", $params);
-    }
+     public function setUser($usuario, $password){
+        return parent::Insert("usuario",array("usuario"=>$usuario , "password"=>$password));
+     }
     
 }
